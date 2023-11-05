@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberspace</title>
+    <link rel="icon" href="./cyber.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .navbar{
+            width: 100%;
+            height: 300px;
+            background-image: url(./cyber.jpeg);
+            background-size:100% 100%;
+            padding: 10px;
+           
+        }
+        .main{
+            width: 80%;
+            height: 50px;
+            margin-left: 80px;
+            display: flex;
+            justify-content: space-between;
+            color: aliceblue;
+            border-radius: 10px;
+        }
+        .main1{
+            display: flex;
+            text-align: center;
+        }
+       
+        .main1 li{
+            list-style-type: none;
+            padding: 15px 30px;
+            position: relative;
+        }
+        a::after{
+            content: "";
+            background-color: rgba(135, 206, 250,0.5);
+            width: 90px;
+            height: 60%;
+            display: block;
+            position: absolute;
+            left: 15%;
+            top: 10px;
+            transition: all 5s;
+            transition-duration: 5s;
+            transition-timing-function: linear;
+    
+        }
+        a:hover::after{
+            top: -20px;
+           transform:translate(50px);
+        }
+        a{
+            text-decoration: none;
+           color: aliceblue;
+           font-size: 20px;
+        }
+        .course{
+            position: relative;
+        
+        }
+        .dropdown{
+            width: 200px;
+            height: 230px;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            display: none; 
+            background-color: black;
+            color: aliceblue;
+        }
+        .course:hover .dropdown{
+            display: block;
+           
+        }
+        input{
+            display: none;
+        }
+        label{
+            display: none;
+            font-size: 25px;
+        }
+        .b{
+            width: 50%;
+            height: 100%;
+            color: aliceblue;
+            margin: 25px;
+        }
+        .b button{
+            margin: 10px;
+           } 
+        button{
+            background-color: rgb(157, 243, 243);
+            border-radius: 10px;
+            padding: 10px ;
+            
+        }
+        .z{
+            width: 100%;
+            height: 500px;
+            background-color:white;
+            
+        }
+        .c{
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        .d{
+            width: 30%;
+            height: 100%;
+            margin: 15px;
+            text-align: center;
+            padding-top: 30px;
+            font-size: 25px;
+        }
+        .d:hover{
+            color: rgb(48, 138, 240);
+        }
+        .e{
+            width: 70%;
+            height: 300px;
+            background-color:rgb(211, 237, 242);
+            margin-left: 15%;
+            padding: 35px;
+            display: flex;
+            margin-top: 80px;
+            box-shadow: 12px 11px 13px 1px lightblue;
+            font-size: 20px;
+        }
+        .f{
+            width: 75%;
+            height: 450px;
+            background-color:rgb(211, 237, 242);
+            margin-left: 15%;
+            box-shadow: 12px -11px 13px 1px lightblue;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+        .g{
+            width: 50%;
+            height: 90%;
+            background-image: url(./Supercomputer-768x432.jpg);
+            background-size: 100% 100%;
+            box-shadow: 10px 10px 10px ;
+            border-radius: 20px;
+        }
+        .h{
+            width: 50%;
+            height: 90%; 
+            margin: 20px;
+        }
+        .i{
+            width: 40%;
+            height: 60%;
+            background-image: url(./Supercomputer-768x432.jpg);
+            background-size: cover;
+            margin-left: 100px;
+            margin-top: 20px;
+            box-shadow: 10px 10px 10px ;
+            border-radius: 20px;
+        }
+       
+        @media screen and (max-width:900px) {
+           .main1{
+            display: none;
+
+           }
+           .main{
+            margin-left: 20px ;
+           }
+           label{
+            display: block;
+            padding: 15px;
+           }
+           input:checked ~ .main1{
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+           
+            background-color: black;
+            color: aliceblue;
+           }
+           .dropdown{
+            position: absolute;
+            top: 20px;
+            left: 60%;
+           }
+          
+           .b{
+            font-size: 15px;
+           }
+           
+           .c{
+           
+           flex-direction: column;
+        }
+           .d{
+            width: 100%;
+            height: 100%;
+            margin-top: 0px;
+        }
+        .d:hover{
+            color: black;
+        }
+        .e{
+            margin-top: 60%;
+            padding: 20px;
+            font-size: 15px;
+            margin-left: 10%;
+            box-shadow: 10px 20px lightskyblue;
+            border-radius: 20px;
+        }
+        .f{
+            font-size: 15px;
+            margin-left: 10%;
+            box-shadow: 15px -20px   lightskyblue;
+            border-radius: 20px;
+        }
+        .fa-solid{
+            color: green;
+            font-size: 25px;
+        }
+        .i{
+            width: 60%;
+            height: 50%;
+            background-size:90% 100%;
+            margin-left: 70px;
+            margin-top: 20px;
+            box-shadow: 10px 10px ;
+            
+    }
+    a::after{
+        display:none;
+    }
+    }
+@media screen and (max-width:700px){
+    .main{
+             margin-left: 40px;
+     }
+     .b button{
+        margin-top: 40px;
+     }
+    .b{
+            width: 100%;
+           font-size: 15px;
+     }
+     .e{
+        margin-top: 130%;
+        font-size: 8px;
+     }
+     .f{
+        margin-left: 10%;
+     }
+     .i{
+        margin-left: 70px;
+     }
+     
+
+}
+    
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="main">
+            <h1 style="margin-left: 10px;padding: 10px;">Responsive</h1>
+            <ul>
+                <input type="checkbox" id="aa">
+                <label for="aa"><i class="fa-solid fa-bars"></i></label>
+                <div class="main1">
+                    <li><a href="./bubbles-png-1.png">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="course">
+                        <a href="">Course</a>
+                     <ul class="dropdown">
+                        <li><a href="">Language</a></li>
+                        <li><a href="">Writing</a></li>
+                        <li><a href="">Internet</a></li>
+                        <li><a href="">Computer system</a></li>
+                    </ul></li>
+                    <li><a href="">Feedback</a></li>
+                    <li><a href="">Content</a></li>
+                    <li><button >Download</button></li>
+                    
+                </div>
+            </ul>
+        </div>
+        <div class="b">
+            <h2>Protect yourself from the dangers of cyberspace</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatum voluptates, harum a quasi optio illo tempore reprehenderit incidunt obcaecati.</p>
+            <button>GET STARTED</button>
+        </div>
+     </div>
+     <div class="z">
+     <div class="c">
+        <div class="d">
+            <i class="fa-solid fa-globe"></i>
+            <h2>Networking</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magni?</p>
+        </div>
+        <div class="d">
+            <i class="fa-solid fa-user"></i>
+            <h2>EndUser</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos deleniti ad pariatur totam eius error, porro esse architecto aperiam veritatis!</p>
+        </div>
+        <div class="d">
+            <i class="fa-solid fa-database"></i>
+        <h2>Server</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, amet provident? Tempora dolorum iure voluptatibus labore enim itaque ad facere.</p>
+        </div>
+     </div>
+     <div class="e">
+        <div class="g"></div>
+        <div class="h">
+          <h2>Work smarter with powerful features</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos, eos ipsa numquam </p>
+        <h5>All Tools in one place</h5>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, architecto?</p>
+    </div> 
+     </div><br><br>
+     <div class="f">
+        <h1 style="padding-top: 50px;padding-left: 30px;">Take full control of your network</h1>
+        <p style="padding-left: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum officia dolores inventore optio at quod atque sed quos harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fugit, eum iure rerum animi dolor vel hic aperiam id nam.</p>
+        <div class="i"></div>
+     </div>
+     
+    </div>
+</body>
+</html>
